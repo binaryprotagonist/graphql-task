@@ -1,6 +1,6 @@
 #Setup App
 npm i
 
-# Run App
+#Run App
 
 npm run start
