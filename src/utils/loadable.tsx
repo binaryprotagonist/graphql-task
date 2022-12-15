@@ -1,0 +1,15 @@
+// @ts-nocheck
+
+import { lazy, Suspense } from 'react';
+
+const loadable = (importFunc, { fallback = null } = { fallback: null }) => {
+  const LazyComponent = lazy(importFunc);
+
+  return (props) => (
+    <Suspense fallback={null}>
+      <LazyComponent {...props} />
+    </Suspense>
+  );
+};
+
+export default loadable;
